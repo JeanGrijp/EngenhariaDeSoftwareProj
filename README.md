@@ -27,7 +27,7 @@ Notas do desenvolvimento
 
 ## 🛠️ Construído com
 
-* [Exemplo](https://github.com/JeanGrijp/EngenhariaDeSoftwareProj/edit/main/README.md) - Exemplo da estrutura
+* [Exemplo](https://github.com/JeanGrijp/EngenhariaDeSoftwareProj/README.md) - Exemplo da estrutura
 
 ## ✒️ Colaboradores
 
@@ -36,7 +36,7 @@ Notas do desenvolvimento
 * **Jean Grijp**
 * **Marcson Santos** 
 
-Lista dos [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
+Lista dos [colaboradores](https://github.com/JeanGrijp/EngenhariaDeSoftwareProj/graphs/contributors) que participaram deste projeto.
 
 
 
