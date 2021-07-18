@@ -1,4 +1,3 @@
-import '../styles/globalStyles'
 import GlobalStyle from '../styles/globalStyles'
 
 function MyApp({ Component, pageProps }) {
@@ -7,7 +6,6 @@ function MyApp({ Component, pageProps }) {
     <GlobalStyle/>
     <Component {...pageProps} />
   </>
-)
-}
+)}
 
 export default MyApp
