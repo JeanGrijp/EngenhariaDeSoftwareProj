@@ -1,23 +1,33 @@
 // import { render } from "react-dom";
 import styled from "styled-components";
 
+
+export const DivContainer = styled.div`
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`
+
 export const DivLeft = styled.div`
 
-  @media screen and (max-width: 620px) {
-    width: 80%;
+  @media screen and (max-width: 800px) {
+    width: 50%;
     height: 50vh;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     display: flex;
     align-items: flex-start;
     justify-content: space-around;
     flex-direction: column;
     padding: 0 30px;
+    /* border: 2px solid red; */
 
     h1 {
       font-family: ${props => props.theme.fonts.fontOne};
       font-weight: 700;
       color: #012205;
-
+      font-size: 2rem;
     }
 
     p {
@@ -52,15 +62,15 @@ export const DivLeft = styled.div`
         h4 {
           color: white;
         }
-        }
       }
     }
+  }
   
   @media screen and (max-width: 2000px) {
     margin: 0 5%;
     width: 60%;
     height: 80vh;
-    border: 2px solid red;
+    /* border: 2px solid green; */
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -108,6 +118,8 @@ export const DivLeft = styled.div`
 
         img {
           background: none;
+          width: 50%;
+          height: 50%;
         }
       }
       
@@ -151,4 +163,17 @@ export const DivRight = styled.div`
       }
     }
   }
+
+  @media screen and (max-width: 2000px) {
+    /* margin: 0 5%; */
+    width: 40%;
+    height: 80vh;
+    border: 2px solid red;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+
 `
