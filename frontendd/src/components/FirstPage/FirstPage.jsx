@@ -3,6 +3,9 @@ import garbageCollector from '../../imagens/garbageSvg.svg'
 import LoginIcon from '../../imagens/Login.svg'
 
 export const FirstPage = () => {
+  
+
+
   return (
     <>
     <div className="container">
