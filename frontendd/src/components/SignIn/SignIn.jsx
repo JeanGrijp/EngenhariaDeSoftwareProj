@@ -1,13 +1,12 @@
-import { ContainerLogin } from "./style"
+import { ContainerSignIn, ContainerSignUp } from "./style"
 
 import googleIcon from '../../imagens/google-logo.svg'
-import logo from '../../imagens/symbol.svg'
 
 
-export const Login = () => {
+export const SignIn = () => {
   return (
     <>
-      <ContainerLogin>
+      <ContainerSignIn>
         <div className="container">
           <h1>Login</h1>
           <div className="inputs">
@@ -18,7 +17,7 @@ export const Login = () => {
               <input 
               type="password" placeholder="Password" name="" 
               id="" />
-              <a className="forgetPassword" href="">Forget passord?</a>
+              <div className="forget"><a className="forgetPassword" href="">Forget passord?</a></div>
               <input 
               type="submit" value="Entrar" />
               <p>Don't have a account? <a href="">Sign Up</a> </p>
@@ -29,7 +28,7 @@ export const Login = () => {
             </form>
           </div>
         </div>
-      </ContainerLogin>
+      </ContainerSignIn>
     </>
   )
 }

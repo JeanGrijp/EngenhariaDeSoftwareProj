@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import Explore from '../../imagens/recycling.jpg';
 
-export const ContainerLogin = styled.div`
+export const ContainerSignIn = styled.div`
 
 @media screen and (max-width: 600px) {
   width: 100%;
@@ -10,16 +10,11 @@ export const ContainerLogin = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: #88D23C; */
   background-image: url('${Explore}');
   background-size: cover;
   background-repeat: no-repeat;
   
   div.container {
-    /* opacity: 0.9; */
-
-    /* background: #8D8D8D; */
-    /* background: #3E6911; */
     width: 80%;
     height: 70%;
     border-radius: 20px;
@@ -27,7 +22,6 @@ export const ContainerLogin = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 
     h1 {
       position: relative;
@@ -40,10 +34,8 @@ export const ContainerLogin = styled.div`
     }
 
     div.inputs {
-      /* border: 1px solid red; */
       width: 80%;
       height: 70%;
-      /* margin-top: 2%; */
       margin: 15% 0;
       display: flex;
       flex-direction: column;
@@ -84,14 +76,23 @@ export const ContainerLogin = styled.div`
         transition: 0.3s;
         border-radius: 10px;
 
-
       }
 
-      a.forgetPassword {
-        color: white;
-        text-decoration: 0;
-        font-family: ${props => props.theme.fonts.fontOne};
+      div.forget {
+        width: 80%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        a.forgetPassword {
+          color: white;
+          text-decoration: 0;
+          font-family: ${props => props.theme.fonts.fontOne};
+          font-weight: 600;
+          
+        }
       }
+
 
       input[type='submit']{
         font-family: ${props => props.theme.fonts.fontOne};
@@ -151,6 +152,14 @@ export const ContainerLogin = styled.div`
 
 }
 
+`;
 
+export const ContainerSignUp = styled.div`
+
+@media screen and (max-width: 600px) {
+  
+
+
+}
 
 `;
