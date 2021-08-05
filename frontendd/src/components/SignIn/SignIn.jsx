@@ -1,4 +1,5 @@
-import { ContainerSignIn, ContainerSignUp } from "./style"
+import { ContainerSignIn } from "./style"
+import { Link } from 'react'
 
 import googleIcon from '../../imagens/google-logo.svg'
 
@@ -17,7 +18,13 @@ export const SignIn = () => {
               <input 
               type="password" placeholder="Password" name="" 
               id="" />
-              <div className="forget"><a className="forgetPassword" href="">Forget passord?</a></div>
+              <div className="forget">
+                {/* <Link 
+                className="forgetPassword" 
+                href="">Forget passord?</Link> */}
+                <a 
+                className="forgetPassword" 
+                href="">Forget passord?</a></div>
               <input 
               type="submit" value="Entrar" />
               <p>Don't have a account? <a href="">Sign Up</a> </p>

@@ -4,7 +4,7 @@ import Explore from '../../imagens/recycling.jpg';
 
 export const ContainerSignIn = styled.div`
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   width: 100%;
   height: 100vh;
   display: flex;
@@ -149,16 +149,6 @@ export const ContainerSignIn = styled.div`
       }
     }
   }
-
-}
-
-`;
-
-export const ContainerSignUp = styled.div`
-
-@media screen and (max-width: 600px) {
-  
-
 
 }
 
