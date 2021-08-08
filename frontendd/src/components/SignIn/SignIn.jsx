@@ -1,10 +1,17 @@
 import { ContainerSignIn } from "./style"
-import { Link } from 'react'
 
 import googleIcon from '../../imagens/google-logo.svg'
+import { ForgetPassword } from "../ForgetPassword/ForgetPassword"
+import { ForgetPasswordContext } from "../../context/ForgetPasswordContext"
+import { useContext } from "react"
 
 
 export const SignIn = () => {
+
+  const {forgetPassword, setforgetPassword} = useContext(ForgetPasswordContext)
+
+
+
   return (
     <>
       <ContainerSignIn>
@@ -19,15 +26,16 @@ export const SignIn = () => {
               type="password" placeholder="Password" name="" 
               id="" />
               <div className="forget">
-                {/* <Link 
-                className="forgetPassword" 
-                href="">Forget passord?</Link> */}
                 <a 
+                onClick={() => setforgetPassword(true)}
                 className="forgetPassword" 
-                href="">Forget passord?</a></div>
-              <input 
-              type="submit" value="Entrar" />
-              <p>Don't have a account? <a href="">Sign Up</a> </p>
+                href="/">Forget Password?</a>
+              </div>
+              <button type="submit">Entrar</button>
+              <p>Don't have a account? 
+              <a href="/" >Sign Up
+              </a> 
+              </p>
               <div className="googleArea">
                 <img src={googleIcon} alt="" srcset="" />
                 <input type="button" value="Or Login with Google"/>
@@ -35,6 +43,7 @@ export const SignIn = () => {
             </form>
           </div>
         </div>
+      { forgetPassword && <ForgetPassword/>}
       </ContainerSignIn>
     </>
   )

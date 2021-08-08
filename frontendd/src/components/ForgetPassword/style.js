@@ -1,36 +1,52 @@
 import styled from "styled-components";
 
-import Explore from '../../imagens/recycling.jpg';
+export const ContainerForgetPassword = styled.div`
 
-export const SignUpContainer = styled.div`
-
-  @media screen and (max-width: 600px) {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('${Explore}');
-    background-size: cover;
-    background-repeat: no-repeat;
+@media screen and (max-width: 700px) {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #BFEF8E;
+  
   
   div.container {
-    width: 80%;
-    height: 70%;
+    position: relative;
+    background: #436C18;
+    width: 300px;
+    height: 200px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    h1 {
-      position: relative;
-      left: -10%;
-      /* margin-left: 5%; */
-      color: white;
-      font-size: 4rem;
-      font-family: ${props => props.theme.fonts.fontOne};
-      border-bottom: 2px solid #88D23C;
+    button.btn {
+      /* border: 1px solid red; */
+      border: 0;
+      width: 20px;
+      height: 20px;
+      font-size: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: 0;
+      outline: 0;
+  
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        text-decoration: 0;
+        color: white;
+        width: 100%;
+        height: 100%;
+      }
     }
 
     div.inputs {
@@ -79,24 +95,17 @@ export const SignUpContainer = styled.div`
         border-radius: 10px;
 
       }
-      
-      button[type='submit']{
+
+      input[type='submit']{
         font-family: ${props => props.theme.fonts.fontOne};
         font-weight: 600;
         width: 50%;
-        height: 4rem;
-        padding: 0 5%;
-        outline: none;
-        margin: 5% 0;
         background: #88D23C;
         transition: 0.5s;
         border-radius: 10px;
-        color: white;
-        border: 0;
-        transition: 0.5s;
       }
 
-      button[type='submit']:hover {
+      input[type='submit']:hover {
         transition: 0.5s;
         background: #3E6911;
         color: white;
