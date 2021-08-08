@@ -10,10 +10,7 @@ export const SignIn = () => {
 
   const {forgetPassword, setforgetPassword} = useContext(ForgetPasswordContext)
 
-
-
   return (
-    <>
       <ContainerSignIn>
         <div className="container">
           <h1>Login</h1>
@@ -45,6 +42,5 @@ export const SignIn = () => {
         </div>
       { forgetPassword && <ForgetPassword/>}
       </ContainerSignIn>
-    </>
   )
 }

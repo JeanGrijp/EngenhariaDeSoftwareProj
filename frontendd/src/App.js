@@ -16,15 +16,15 @@ function App() {
 
   <ThemeProvider  theme={light}>
     <GlobalStyle/>
-    <BrowserRouter>
       <ForgerPasswordProvider>
+    <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/cadastrar" exact component={SignUp} />
           <Route path="/forgetPassword" exact component={ForgetPassword} />
         </Switch>
-      </ForgerPasswordProvider>
     </BrowserRouter>
+      </ForgerPasswordProvider>
   </ThemeProvider>
   );
 }

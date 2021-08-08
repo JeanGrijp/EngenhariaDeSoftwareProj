@@ -1,13 +1,17 @@
+import { useContext } from "react"
+import { ForgetPasswordContext } from "../../context/ForgetPasswordContext"
 import { ContainerForgetPassword } from "./style"
 
 
 export const ForgetPassword = () => {
 
+  const {setforgetPassword} = useContext(ForgetPasswordContext)
 
   return (
     <ContainerForgetPassword>
       <div className="container">
-        <button 
+        <button
+        onClick={setforgetPassword(false)} 
         className="btn">
           <a 
           href="/">X</a>
