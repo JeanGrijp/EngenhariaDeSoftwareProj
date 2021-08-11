@@ -86,13 +86,13 @@ export const ContainerSignIn = styled.div`
         justify-content: flex-end;
         align-items: center;
 
-        a.forgetPassword {
+        p.forgetPassword {
           color: white;
           text-decoration: 0;
           font-family: ${props => props.theme.fonts.fontOne};
           font-size: 1.2rem;
           font-weight: 600;
-          
+          cursor: pointer;
         }
       }
 

@@ -8,9 +8,10 @@ import { useContext } from "react"
 
 export const SignIn = () => {
 
-  const {forgetPassword, setforgetPassword} = useContext(ForgetPasswordContext)
+  const {forgetPassword, setForgetPassword} = useContext(ForgetPasswordContext)
 
   return (
+    <>
       <ContainerSignIn>
         <div className="container">
           <h1>Login</h1>
@@ -23,10 +24,10 @@ export const SignIn = () => {
               type="password" placeholder="Password" name="" 
               id="" />
               <div className="forget">
-                <a 
-                onClick={() => setforgetPassword(true)}
+                <p 
+                onClick={() => setForgetPassword(true)}
                 className="forgetPassword" 
-                href="/">Forget Password?</a>
+                >Forget Password?</p>
               </div>
               <button type="submit">Entrar</button>
               <p>Don't have a account? 
@@ -40,7 +41,8 @@ export const SignIn = () => {
             </form>
           </div>
         </div>
-      { forgetPassword && <ForgetPassword/>}
       </ContainerSignIn>
+      { forgetPassword && <ForgetPassword/>}
+    </>
   )
 }

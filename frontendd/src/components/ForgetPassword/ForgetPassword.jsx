@@ -5,13 +5,13 @@ import { ContainerForgetPassword } from "./style"
 
 export const ForgetPassword = () => {
 
-  const {setforgetPassword} = useContext(ForgetPasswordContext)
+  const {setForgetPassword} = useContext(ForgetPasswordContext)
 
   return (
     <ContainerForgetPassword>
       <div className="container">
         <button
-        onClick={setforgetPassword(false)} 
+        onClick={setForgetPassword(false)} 
         className="btn">
           <a 
           href="/">X</a>

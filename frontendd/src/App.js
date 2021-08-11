@@ -14,17 +14,17 @@ import { ForgerPasswordProvider } from "./context/ForgetPasswordContext";
 function App() {
   return (
 
-  <ThemeProvider  theme={light}>
-    <GlobalStyle/>
-      <ForgerPasswordProvider>
-    <BrowserRouter>
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/cadastrar" exact component={SignUp} />
-          <Route path="/forgetPassword" exact component={ForgetPassword} />
-        </Switch>
-    </BrowserRouter>
-      </ForgerPasswordProvider>
+    <ThemeProvider  theme={light}>
+    <ForgerPasswordProvider>
+      <GlobalStyle/>
+      <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/cadastrar" exact component={SignUp} />
+            <Route path="/forgetPassword" exact component={ForgetPassword} />
+          </Switch>
+      </BrowserRouter>
+    </ForgerPasswordProvider>
   </ThemeProvider>
   );
 }

@@ -3,15 +3,16 @@ import { createContext, useState } from "react";
 
 export const ForgetPasswordContext = createContext()
 
-export const ForgerPasswordProvider = () => {
+export const ForgerPasswordProvider = ({children}) => {
 
-  const [forgetPassword, setforgetPassword] = useState(false);
+  const [forgetPassword, setForgetPassword] = useState(false);
 
 
   return (
     <ForgetPasswordContext.Provider
-      value={{forgetPassword, setforgetPassword}}
+      value={{forgetPassword, setForgetPassword}}
     >
+      {children}
     </ForgetPasswordContext.Provider>
   )
 }
