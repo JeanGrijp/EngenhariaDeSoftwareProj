@@ -1,13 +1,12 @@
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-
 import { Home } from "./components/Home/Home";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import light from "./styles/themes/light";
 import { SignUp } from "./components/SignUp/SignUp";
 import { ForgetPassword } from "./components/ForgetPassword/ForgetPassword";
 import { ForgerPasswordProvider } from "./context/ForgetPasswordContext";
+
+
 
 
 
