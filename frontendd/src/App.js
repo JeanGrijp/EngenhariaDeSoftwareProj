@@ -1,26 +1,23 @@
 import { ThemeProvider } from "styled-components";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-
 import { Home } from "./components/Home/Home";
-import { SignIn } from "./components/SignIn/SignIn";
-import { SignUp } from "./components/SignUp/SignUp";
 import { GlobalStyle } from "./styles/GlobalStyle";
 import light from "./styles/themes/light";
 
 
+
+
 function App() {
-  return (
-  <ThemeProvider  theme={light}>
-    <Home/>
-    <BrowserRouter>
-      <Switch>
-          <GlobalStyle/>
-          <Route path='/' exact component={Home} />
-      </Switch>
-    </BrowserRouter>
-  </ThemeProvider>
-  );
+    return ( <
+        ThemeProvider theme = { light } >
+        <
+        Home / >
+
+        <
+        GlobalStyle / >
+
+        <
+        /ThemeProvider>
+    );
 }
 
 export default App;
