@@ -12,3 +12,5 @@ export const Home = () => {
     </HomeStyle>
   )
 }
+
+export default Home;

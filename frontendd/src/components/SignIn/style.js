@@ -29,7 +29,6 @@ export const ContainerSignIn = styled.div`
       /* margin-left: 5%; */
       color: white;
       font-size: 3rem;
-      font-family: ${props => props.theme.fonts.fontOne};
       border-bottom: 2px solid #88D23C;
     }
 
@@ -51,7 +50,7 @@ export const ContainerSignIn = styled.div`
       align-items: center;
       }
 
-      input {
+      input, button {
         background: 0;
         border: #88D23C;
         border-bottom: 2px solid #88D23C;
@@ -87,15 +86,15 @@ export const ContainerSignIn = styled.div`
         a.forgetPassword {
           color: white;
           text-decoration: 0;
-          font-family: ${props => props.theme.fonts.fontOne};
+
           font-weight: 600;
           
         }
       }
 
 
-      input[type='submit']{
-        font-family: ${props => props.theme.fonts.fontOne};
+      button[type='submit']{
+
         font-weight: 600;
         width: 50%;
         background: #88D23C;
@@ -103,7 +102,7 @@ export const ContainerSignIn = styled.div`
         border-radius: 10px;
       }
 
-      input[type='submit']:hover {
+      button[type='submit']:hover {
         transition: 0.5s;
         background: #3E6911;
         color: white;
@@ -114,13 +113,13 @@ export const ContainerSignIn = styled.div`
 
       p {
         color: white;
-        font-family: ${props => props.theme.fonts.fontOne};
+
         margin-bottom: 10px;
         font-size: 1rem;
         font-weight: 600;
 
         a {
-          font-family: ${props => props.theme.fonts.fontOne};
+
           color: red;
           text-decoration: 0;
         }

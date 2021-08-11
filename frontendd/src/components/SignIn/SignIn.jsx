@@ -5,6 +5,13 @@ import googleIcon from '../../imagens/google-logo.svg'
 
 
 export const SignIn = () => {
+  //só pra validar se o botão é clicável
+  let buttonText = 'Entrar'
+
+  function handleClick() {
+    buttonText = 'Button Clicked'
+  }
+
   return (
     <>
       <ContainerSignIn>
@@ -17,7 +24,8 @@ export const SignIn = () => {
               id="" />
               <input 
               type="password" placeholder="Password" name="" 
-              id="" />
+              id=""
+               />
               <div className="forget">
                 {/* <Link 
                 className="forgetPassword" 
@@ -25,8 +33,7 @@ export const SignIn = () => {
                 <a 
                 className="forgetPassword" 
                 href="">Forget passord?</a></div>
-              <input 
-              type="submit" value="Entrar" />
+              <button type="submit" data-testid="ButtonE" onClick={handleClick}>{buttonText}</button>
               <p>Don't have a account? <a href="">Sign Up</a> </p>
               <div className="googleArea">
                 <img src={googleIcon} alt="" srcset="" />
