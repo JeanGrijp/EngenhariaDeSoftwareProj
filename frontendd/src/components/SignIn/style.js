@@ -28,7 +28,7 @@ export const ContainerSignIn = styled.div`
       left: -20%;
       /* margin-left: 5%; */
       color: white;
-      font-size: 3rem;
+      font-size: 4rem;
       font-family: ${props => props.theme.fonts.fontOne};
       border-bottom: 2px solid #88D23C;
     }
@@ -59,7 +59,7 @@ export const ContainerSignIn = styled.div`
         margin: 5% 0;
         /* border-radius: 10px; */
         width: 80%;
-        height: 2.5rem;
+        height: 4rem;
         padding: 0 5%;
         color: white;
         transition: 0.3s;
@@ -67,7 +67,9 @@ export const ContainerSignIn = styled.div`
       }
 
       input::placeholder{
+        font-size: 1.5rem;
         color: white;
+        font-weight: 800;
       }
 
       input:focus {
@@ -84,26 +86,34 @@ export const ContainerSignIn = styled.div`
         justify-content: flex-end;
         align-items: center;
 
-        a.forgetPassword {
+        p.forgetPassword {
           color: white;
           text-decoration: 0;
           font-family: ${props => props.theme.fonts.fontOne};
+          font-size: 1.2rem;
           font-weight: 600;
-          
+          cursor: pointer;
         }
       }
 
 
-      input[type='submit']{
+      button[type='submit']{
         font-family: ${props => props.theme.fonts.fontOne};
         font-weight: 600;
         width: 50%;
+        height: 4rem;
+        padding: 0 5%;
+        outline: none;
+        margin: 5% 0;
         background: #88D23C;
         transition: 0.5s;
         border-radius: 10px;
+        color: white;
+        border: 0;
+        transition: 0.5s;
       }
 
-      input[type='submit']:hover {
+      button[type='submit']:hover {
         transition: 0.5s;
         background: #3E6911;
         color: white;
@@ -116,7 +126,7 @@ export const ContainerSignIn = styled.div`
         color: white;
         font-family: ${props => props.theme.fonts.fontOne};
         margin-bottom: 10px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight: 600;
 
         a {
@@ -124,12 +134,11 @@ export const ContainerSignIn = styled.div`
           color: red;
           text-decoration: 0;
         }
-
       }
 
       div.googleArea {
         width: 80%;
-        height: 2.5rem;
+        height: 4rem;
         border: none;
         border-radius: 10px;
         text-align: center;
@@ -145,11 +154,12 @@ export const ContainerSignIn = styled.div`
 
         input {
           border: 0;
+          outline: 0;
+          border: 0;
         }
       }
     }
   }
-
 }
 
 `;

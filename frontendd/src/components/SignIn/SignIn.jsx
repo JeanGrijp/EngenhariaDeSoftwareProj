@@ -1,10 +1,22 @@
+
+import { ContainerSignIn } from "./style"
+
+import googleIcon from '../../imagens/google-logo.svg'
+import { ForgetPassword } from "../ForgetPassword/ForgetPassword"
+import { ForgetPasswordContext } from "../../context/ForgetPasswordContext"
+import { useContext } from "react"
 import { useState } from 'react'
 import firebaseConnection, { db } from '../../firebase'
 import googleIcon from '../../imagens/google-logo.svg'
 import { ContainerSignIn } from "./style"
 
 
+
 export const SignIn = () => {
+
+
+  const {forgetPassword, setForgetPassword} = useContext(ForgetPasswordContext)
+
 
   const userId = localStorage.getItem("uid") || "00000";
 
@@ -86,11 +98,16 @@ export const SignIn = () => {
               {login}
               {password}
               <div className="forget">
-                {/* <Link 
+                <p 
+                onClick={() => setForgetPassword(true)}
                 className="forgetPassword" 
-                href="">Forget passord?</Link> */}
-                <a 
-                className="forgetPassword" 
+                >Forget Password?</p>
+              </div>
+              <button type="submit">Entrar</button>
+              <p>Don't have a account? 
+              <a href="/" >Sign Up
+              </a> 
+              </p>
                 href="">Forget passord?</a>
               </div>
               <input 
@@ -107,6 +124,7 @@ export const SignIn = () => {
           </div>
         </div>
       </ContainerSignIn>
+      { forgetPassword && <ForgetPassword/>}
     </>
   )
 }

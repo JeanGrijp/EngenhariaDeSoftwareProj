@@ -1,12 +1,17 @@
 import { SignUpContainer } from "./style"
 
 export const SignUp = () => {
+
+
+
+
+
   return (
     <SignUpContainer>
       <div className="container">
         <h1>Cadastro</h1>
         <div className="inputs">
-          <form action="">
+          <form action="/cadastro" method="POST">
             <input 
             type="email" 
             placeholder="Email" 
@@ -22,9 +27,7 @@ export const SignUp = () => {
             placeholder="Confirm Password" 
             name="" 
             id="" />
-            <input 
-            type="submit" 
-            value="Cadastrar"/>
+            <button type="submit">Cadastrar</button>
           </form>
         </div>
       </div>
