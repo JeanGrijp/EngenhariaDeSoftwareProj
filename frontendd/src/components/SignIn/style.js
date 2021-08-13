@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 import Explore from '../../imagens/recycling.jpg';
+import {Link} from 'react-router-dom';
+
 
 export const ContainerSignIn = styled.div`
 
@@ -96,45 +98,55 @@ export const ContainerSignIn = styled.div`
         }
       }
 
+      div.Submit {
+        /* border: 3px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
 
-      button[type='submit']{
-        font-family: ${props => props.theme.fonts.fontOne};
-        font-weight: 600;
-        width: 50%;
-        height: 4rem;
-        padding: 0 5%;
-        outline: none;
-        margin: 5% 0;
-        background: #88D23C;
-        transition: 0.5s;
-        border-radius: 10px;
-        color: white;
-        border: 0;
-        transition: 0.5s;
+    
+          button[type='submit']{
+            font-family: ${props => props.theme.fonts.fontOne};
+            font-weight: 600;
+            width: 70%;
+            height: 4rem;
+            padding: 0 5%;
+            outline: none;
+            margin: 5% 0;
+            background: #88D23C;
+            transition: 0.5s;
+            border-radius: 10px;
+            color: white;
+            border: 0;
+            transition: 0.5s;
+          }
+    
+          button[type='submit']:hover {
+            transition: 0.5s;
+            background: #3E6911;
+            color: white;
+            border-radius: 10px;
+            border: 1px solid white;
+    
+          }
+    
+          p {
+            color: white;
+            font-family: ${props => props.theme.fonts.fontOne};
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            font-weight: 600;
+    
+            a {
+              font-family: ${props => props.theme.fonts.fontOne};
+              color: red;
+              text-decoration: 0;
+            }
+          }
+
       }
 
-      button[type='submit']:hover {
-        transition: 0.5s;
-        background: #3E6911;
-        color: white;
-        border-radius: 10px;
-        border: 1px solid white;
-
-      }
-
-      p {
-        color: white;
-        font-family: ${props => props.theme.fonts.fontOne};
-        margin-bottom: 10px;
-        font-size: 1.2rem;
-        font-weight: 600;
-
-        a {
-          font-family: ${props => props.theme.fonts.fontOne};
-          color: red;
-          text-decoration: 0;
-        }
-      }
 
       div.googleArea {
         width: 80%;

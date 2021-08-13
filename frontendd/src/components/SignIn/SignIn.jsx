@@ -7,12 +7,11 @@ import { ForgetPasswordContext } from "../../context/ForgetPasswordContext"
 import { useContext } from "react"
 import { useState } from 'react'
 import firebaseConnection, { db } from '../../firebase'
-import googleIcon from '../../imagens/google-logo.svg'
-import { ContainerSignIn } from "./style"
+import { useHistory } from "react-router-dom"
 
 
 
-export const SignIn = () => {
+export const SignIn = ({ handleSignIn }) => {
 
 
   const {forgetPassword, setForgetPassword} = useContext(ForgetPasswordContext)
@@ -22,7 +21,7 @@ export const SignIn = () => {
 
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
-  //const history = useHistory(); importar biblioteca para fazer o roteamento >> react-router-dom
+  const history = useHistory(); //importar biblioteca para fazer o roteamento >> react-router-dom
   const [errorMessage, setErroMessage] = useState('')
 
   const handleLogin = (e)  =>{
@@ -32,9 +31,8 @@ export const SignIn = () => {
     const authUser = firebaseConnection.auth()
     authUser.signInWithEmailAndPassword(login, password).then((response) =>{
       localStorage.setItem("uid", response.user.uid);
-
-      //history.push('/pag-two') redirecionar user
-      //catch
+      handleSignIn(response.user.uid);
+      history.push('/home') //redirecionar user
 
     })
 
@@ -51,36 +49,11 @@ export const SignIn = () => {
     
   }
 
-      const onPasswordChange = (e)  =>{
+    const onPasswordChange = (e)  =>{
 
     setPassword(e.target.value)
     
   }
-
-  function criar_info_user(){
-
-    db.collection('users').doc(userId).set({name: 'marcson', idade: '27'})
-
-  };
-  criar_info_user()
-  //função criada apenas para teste
-
-//  const getTasks = async () => {
-//     const tasksRef = db
-//       .collection("users")
-//       .doc(userId) //user logado
-//       .collection("tasks")
-//       .orderBy("date");
-
-//     const data = await tasksRef.get();
-//     let newData = [];
-//     data.docs.forEach((item) => {
-//       newData = [...newData, { ...item.data(), id: item.id }];
-//     });
-//     setTasks(newData);
-//   };
-// a função getTasks serve para mostrar as informações do banco, estou salvando apra criar futuramente
-
   
   return (
     <>
@@ -101,25 +74,27 @@ export const SignIn = () => {
                 <p 
                 onClick={() => setForgetPassword(true)}
                 className="forgetPassword" 
-                >Forget Password?</p>
+                >Forget Password?
+                </p>
               </div>
-              <button type="submit">Entrar</button>
-              <p>Don't have a account? 
-              <a href="/" >Sign Up
-              </a> 
-              </p>
-                href="">Forget passord?</a>
+              <div className="Submit">
+                <button type="submit">Entrar</button>
+                <p>Don't have a account? 
+                <a href="/" >Sign Up
+                </a> 
+                </p>
               </div>
-              <input 
-              type="submit" value="Entrar" />
-              <p>Don't have a account? <a href="">Sign Up</a> </p>
+              {/* <input 
+              type="submit" 
+              value="Entrar" />
+              <p>Don't have a account? <a href="">Sign Up</a> </p> */}
               <div className="googleArea">
                 <img src={googleIcon} alt="" srcset="" />
                 <input type="button" value="Or Login with Google"/>
               </div>
-              <div style={{fontSize:36, color:'white', background:'green', padding:20}}>
+              {/* <div style={{fontSize:36, color:'white', background:'green', padding:20}}>
                 {errorMessage}
-              </div>
+              </div> */}
             </form>
           </div>
         </div>
