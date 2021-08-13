@@ -84,17 +84,6 @@ export const SignIn = ({ handleSignIn }) => {
                 </a> 
                 </p>
               </div>
-              {/* <input 
-              type="submit" 
-              value="Entrar" />
-              <p>Don't have a account? <a href="">Sign Up</a> </p> */}
-              <div className="googleArea">
-                <img src={googleIcon} alt="" srcset="" />
-                <input type="button" value="Or Login with Google"/>
-              </div>
-              {/* <div style={{fontSize:36, color:'white', background:'green', padding:20}}>
-                {errorMessage}
-              </div> */}
             </form>
           </div>
         </div>
