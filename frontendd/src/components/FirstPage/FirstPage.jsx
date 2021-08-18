@@ -11,7 +11,7 @@ export const FirstPage = () => {
     <DivContainer>
 
       <DivLeft>
-        <h1 className="logo">Recoleta</h1>
+        {/* <h1 className="logo">Recoleta</h1> */}
         <h1 className="text">Seu lugar para descarte de resíduos</h1>
         <p>Ajudamos pessoas a encontrarem pontos de coletas de forma eficiente</p>
         <button className="btn">
