@@ -8,7 +8,8 @@ export const SignIn = () => {
   //só pra validar se o botão é clicável
   let buttonText = 'Entrar'
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault()
     buttonText = 'Button Clicked'
   }
 
@@ -33,7 +34,8 @@ export const SignIn = () => {
                 <a 
                 className="forgetPassword" 
                 href="">Forget passord?</a></div>
-              <button type="submit" data-testid="ButtonE" onClick={handleClick}>{buttonText}</button>
+              <button type="button" data-testid="ButtonE" onClick={handleClick}>{buttonText}</button>
+
               <p>Don't have a account? <a href="">Sign Up</a> </p>
               <div className="googleArea">
                 <img src={googleIcon} alt="" srcset="" />

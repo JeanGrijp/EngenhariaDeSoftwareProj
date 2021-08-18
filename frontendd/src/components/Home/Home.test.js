@@ -20,7 +20,7 @@ describe('Testando página de login', () => {
 
     test('Verifica se depois de clicar no botão, ele vai pra outra tela', () => {
         render(<Home />);
-
+        window.HTMLFormElement.prototype.submit = () => {}
         const buttonLogin = screen.getByRole('button', { name: /Entrar/i});
         fireEvent.click(buttonLogin);
 
@@ -29,8 +29,8 @@ describe('Testando página de login', () => {
 
     test('Valida se o clique do botão está funcionando', () => {
         render(<Home />);
-
-        const buttonLogin = screen.getByTestId('ButtonE');
+        window.HTMLFormElement.prototype.submit = () => {}
+        const buttonLogin = screen.getByRole('button', { name: /Entrar/i});
         fireEvent.click(buttonLogin);
 
         expect(buttonLogin).toHaveTextContent('Button Clicked');
