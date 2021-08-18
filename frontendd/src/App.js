@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import { Home } from "./components/Home/Home";
 import { GlobalStyle } from "./styles/GlobalStyle";
@@ -8,49 +8,44 @@ import { ForgetPassword } from "./components/ForgetPassword/ForgetPassword";
 import { ForgerPasswordProvider } from "./context/ForgetPasswordContext";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { SignIn } from "./components/SignIn/SignIn";
+import { HandleLoginLogoutContext, HandleLoginLogoutContextProvider } from "./context/HandleLoginLogoutContext";
 
 function App() {
-  const [uuid, setUuid] = useState(localStorage.getItem("uid"));
-  let isAuth = uuid !== null;
 
-  const handleLogin = (uuid) => {
-    setUuid(uuid);
-  };
-  
-  const handleLogOut = () => {
-    setUuid(null);
-  };
+  const { handleLogin, handleLogOut, isAuth } = useContext(HandleLoginLogoutContext)
 
   return (
     <ThemeProvider theme={light}>
+        <HandleLoginLogoutContextProvider>
       <ForgerPasswordProvider>
-        <GlobalStyle />
-        <BrowserRouter>
-          <Switch>
-            {isAuth ? (
-              <>
-                <Route path="/home" exact>
-                  <Home />
-                </Route>
-                <Redirect to="/home" />
-              </>
-            ) : (
-              <>
-                <Route path="/" exact>
-                  <SignIn handleSignIn={handleLogin} />
-                </Route>
-                <Route path="/cadastrar" exact component={SignUp} />
-                <Route
-                  path="/forgetPassword"
-                  exact
-                  component={ForgetPassword}
-                />
-                <Redirect to="/" />
-              </>
-            )}
-          </Switch>
-        </BrowserRouter>
+          <GlobalStyle />
+          <BrowserRouter>
+            <Switch>
+              {isAuth ? (
+                <>
+                  <Route path="/home" exact>
+                    <Home />
+                  </Route>
+                  <Redirect to="/home" />
+                </>
+              ) : (
+                <>
+                  <Route path="/" exact>
+                    <SignIn handleSignIn={handleLogin} />
+                  </Route>
+                  <Route path="/cadastrar" exact component={SignUp} />
+                  <Route
+                    path="/forgetPassword"
+                    exact
+                    component={ForgetPassword}
+                    />
+                  <Redirect to="/" />
+                </>
+              )}
+            </Switch>
+          </BrowserRouter>
       </ForgerPasswordProvider>
+        </HandleLoginLogoutContextProvider>
     </ThemeProvider>
   );
 }

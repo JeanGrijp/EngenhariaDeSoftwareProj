@@ -9,13 +9,28 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   
+
+
+  @media screen and (max-width: 800px) {
+    html {
+      font-size: 8px;
+    }
+  }
+
+  @media screen and (min-width: 800px) {
+    html {
+      font-size: 15px;
+    }
+  }
+
+
   html {
      scroll-behavior: smooth;
-     font-size: 62.5%
+     /* font-size: 62.5% */
   }
 
   body {
-    background: ${props => props.theme.colours.backgroundBorder};
+    background: ${props => props.theme.colours.background};
   }
 
   .container {

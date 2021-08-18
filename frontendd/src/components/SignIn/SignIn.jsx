@@ -1,7 +1,6 @@
 
 import { ContainerSignIn } from "./style"
 
-import googleIcon from '../../imagens/google-logo.svg'
 import { ForgetPassword } from "../ForgetPassword/ForgetPassword"
 import { ForgetPasswordContext } from "../../context/ForgetPasswordContext"
 import { useContext } from "react"
@@ -17,14 +16,12 @@ export const SignIn = ({ handleSignIn }) => {
   const {forgetPassword, setForgetPassword} = useContext(ForgetPasswordContext)
 
 
-  const userId = localStorage.getItem("uid") || "00000";
-
   const [login, setLogin] = useState('')
   const [password, setPassword] = useState('')
   const history = useHistory(); //importar biblioteca para fazer o roteamento >> react-router-dom
   const [errorMessage, setErroMessage] = useState('')
 
-  const handleLogin = (e)  =>{
+  const handleLoginSignIn = (e)  =>{
 
     e.preventDefault()
 
@@ -61,7 +58,7 @@ export const SignIn = ({ handleSignIn }) => {
         <div className="container">
           <h1>Login</h1>
           <div className="inputs">
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLoginSignIn}>
               <input 
               type="email" placeholder="Email" name="email" 
               id="" onChange={onEmailChange} value={login}/>
