@@ -10,16 +10,25 @@ export const GlobalStyle = createGlobalStyle`
   }
   
 
+  /* @media screen and (max-height: 700px) {
+    html {
+      height: 100vh;
+    }
+  } */
 
   @media screen and (max-width: 800px) {
     html {
-      font-size: 8px;
+      font-size: 15px;
     }
   }
 
   @media screen and (min-width: 800px) {
     html {
-      font-size: 15px;
+      font-size: 20px;
+      /* position: relative; */
+      /* margin: 0 auto; */
+      /* width: 100%; */
+      /* max-width: 1700px; */
     }
   }
 
@@ -36,6 +45,5 @@ export const GlobalStyle = createGlobalStyle`
   .container {
     max-width: 1440px;
     margin: 0 auto;
-    width: 90vw;
   }
 `;

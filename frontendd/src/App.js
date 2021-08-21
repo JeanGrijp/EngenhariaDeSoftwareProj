@@ -9,6 +9,7 @@ import { ForgerPasswordProvider } from "./context/ForgetPasswordContext";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import { SignIn } from "./components/SignIn/SignIn";
 import { HandleLoginLogoutContext, HandleLoginLogoutContextProvider } from "./context/HandleLoginLogoutContext";
+import { SecondPage } from "./components/SecondPage/SecondPage";
 
 function App() {
 
@@ -24,7 +25,7 @@ function App() {
               {isAuth ? (
                 <>
                   <Route path="/home" exact>
-                    <Home />
+                    <SecondPage/>
                   </Route>
                   <Redirect to="/home" />
                 </>
