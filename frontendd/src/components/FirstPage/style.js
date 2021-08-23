@@ -32,7 +32,7 @@ export const DivLeft = styled.div`
   justify-content: space-around;
   padding: 5% 0;
 
-  @media screen and (max-width: 801px) and (max-height: 1281px) {
+  @media screen and (max-width: 801px)  {
     width: 100%;
     height: 100%;
     min-height: 650px;
@@ -179,7 +179,7 @@ export const DivLeft = styled.div`
     }
   }
 
-  @media screen and (min-width: 1201px) and (min-height: 800px) {
+  @media screen and (min-width: 1201px) {
     width: 60%;
     max-width: 2000px;
     height: 100%;
