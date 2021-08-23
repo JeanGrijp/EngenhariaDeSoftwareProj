@@ -42,13 +42,13 @@ Lista dos [colaboradores](https://github.com/JeanGrijp/EngenhariaDeSoftwareProj/
 <br>
 
 # Descrição do Projeto
-O trabalho será direcionado a um ambiente onde a coleta de resíduos recicláveis de várias regiões seja feita de uma forma mais fácil tanto para o órgão que coleta, quanto para quem se oferece a doar os resíduos recicláveis.
+O trabalho será direcionado a um ambiente onde a coleta de resíduos recicláveis de várias regiões seja feita de uma forma mais fácil, tanto para o órgão que coleta, quanto para quem se oferece a doar os resíduos recicláveis.
 
 <br>
 <br>
 
 # Justificativa do Projeto
-
+A ideia do projeto surgiu com uma análise do problema no bairro de cada membro da equipe, a equipe viu que o problema precisava de uma atenção maior pelo poder público e que é relativamente difícil encontrar uma solução por meio da tecnologia, de uma forma simples e prática.
 
 <br>
 <br>
@@ -119,10 +119,10 @@ Realizamos uma pequena pesquisa com o Google Form, com a inteção de criar uma 
 </div>
 
 # Desenvolvimento
-
+Tivemos bastantes desafios na construção da aplicação, embora a aplicação seja simples no campo das ideias, nenhum dos membros tinham uma experiência considerável para a criação da aplicação e conseguir entregar todas as features no prazo. Além disso, os frameworks inicialmente planejados para criação da aplicação, precisaram ser repensados e se seria melhor pivotar aqueala ideia inicial. Pensamos em utilizar o Next.js e TypeScript, mas precisariamos de mais tempo para aprender do que se fizessemos a aplicação com React.js com o javascript normalmente. Integrar o front-end com o firebase foi mais complicado do que imaginavamos, foram necessárias algumas monitorias com Daniel para entendermos melhor a integração do front-end com o back-end no firebase e a manipulação da base de dados em tempo real. 
 
 # Melhorias Futuras
-
+Precisamos criar algumas telas, principalmente a tela que exibe todos os pontos de coleta da região, permitindo o usuário filtrar por endereço quais pontos de coleta ele quer saber. Além disso, é interessante a criação de um app com react native usando o mesmo back-end do firebase, permitindo a manipulação dos dados tanto na versão web, tanto na versão mobile.
 
 
 # Tech Stack
@@ -169,6 +169,6 @@ cd .\frontendd\
 yarn start
 
 
-# Final Considerations
+# Considerações finais
 
-
+Esse projeto foi extremamente importante para a equipe aprender as tecnologias utilizadas, planejar melhor a criação de uma aplicação com divisão de tarefas, utilizar o github em conjunto com outros membros do time e gerir os conflitos de código em cada merge. Cada dificuldade encontrada para concluir uma feature, precisou de uma analise e algumas horas de estudo sobre o framework, o que nos fez amadurecer cada ideia e pensar melhor no que deveria ser feito. Acredito que cada membro da equipe amadureceu a forma como pensar na criação de um projeto, entendendo pelo menos uma parte da dificuldade que é a criação de uma aplicação para mercado.
