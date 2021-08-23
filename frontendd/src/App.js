@@ -25,7 +25,7 @@ function App() {
               {isAuth ? (
                 <>
                   <Route path="/home" exact>
-                    <SecondPage/>
+                    <Home/>
                   </Route>
                   <Redirect to="/home" />
                 </>
