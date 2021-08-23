@@ -1,4 +1,5 @@
 import { createContext, useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 
 export const HandleLoginLogoutContext = createContext()
@@ -7,13 +8,14 @@ export const HandleLoginLogoutContext = createContext()
 export const HandleLoginLogoutContextProvider = ({children}) => {
 
   const [uuid, setUuid] = useState(localStorage.getItem("uid"));
-  let isAuth = useRef(uuid !== null);
-
+  let isAuth = uuid !== null;
+  console.log(isAuth)
   function handleLogin (uuid) {
     setUuid(uuid);
   };
   
   function handleLogOut () {
+    localStorage.removeItem("uid");
     setUuid(null);
   };
 

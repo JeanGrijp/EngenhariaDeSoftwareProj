@@ -77,7 +77,7 @@ export const SignIn = ({ handleSignIn }) => {
               <div className="Submit">
                 <button type="submit">Entrar</button>
                 <p>Don't have a account? 
-                <a href="/" >Sign Up
+                <a href="/cadastrar" >Sign Up
                 </a> 
                 </p>
               </div>
